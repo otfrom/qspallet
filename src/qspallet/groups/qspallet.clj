@@ -46,9 +46,9 @@
 
 (def
   ^{:doc "Defines a group spec that can be passed to converge or lift."}
-  gqpallet
+  greenqloud-pallet
   (api/group-spec
-   "gqpallet"
+   "greenqloud-pallet"
    :extends [base-server qspallet-server]
    :node-spec greenqloud-node-spec))
 
@@ -84,6 +84,15 @@
                    :count 0)
    :compute (configure/compute-service :aws))
 
+  ;; or the same using the defined qspallet group above
+  (api/converge
+   (assoc qspallet :count 1)
+   :compute (configure/compute-service :aws))
+
+  (api/converge
+   (assoc qspallet :count 0)
+   :compute (configure/compute-service :aws))
+  
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Rackspace OpenStack in London
   ;;
@@ -95,17 +104,9 @@
    (assoc qspallet :count 1)
    :compute (configure/compute-service :rs-openstack-uk))
 
-  (api/converge
-   (api/group-spec "mygroup"
-                   :count 1
-                   :node-spec (api/node-spec
-                               :image {:os-family :ubuntu
-                                       :os-64-bit true}))
-   :compute (configure/compute-service :rs-openstack-uk))
-
   ;; shut 'em down
   (api/converge
-   (api/group-spec "qspallet" :count 0)
+   (assoc qspallet :count 0)
    :compute (configure/compute-service :rs-openstack-uk))
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -115,12 +116,12 @@
 
   ;; start 'em up
   (api/converge
-   (assoc gqpallet :count 1)
+   (assoc greenqloud-pallet :count 1)
    :compute (configure/compute-service :greenqloud))
 
   ;; shut 'em down
   (api/converge
-   (api/group-spec "gqpallet" :count 0)
+   (assoc greenqloud-pallet :count 0)
    :compute (configure/compute-service :greenqloud))
   
   )
