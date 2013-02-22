@@ -3,7 +3,7 @@
   :dependencies [[org.clojure/clojure "1.4.0"]
 
                  ;; The latest pallet
-                 [org.cloudhoist/pallet "0.8.0-SNAPSHOT"]
+                 [com.palletops/pallet "0.8.0-beta.1"]
 
                  ;; The latest jclouds fun
                  [org.cloudhoist/pallet-jclouds "1.5.2-SNAPSHOT"]
