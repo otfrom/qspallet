@@ -6,9 +6,9 @@
                  [org.cloudhoist/pallet "0.8.0-SNAPSHOT"]
 
                  ;; The latest jclouds fun
-                 [org.cloudhoist/pallet-jclouds "1.5.0-SNAPSHOT"]
+                 [org.cloudhoist/pallet-jclouds "1.5.2-SNAPSHOT"]
                  [org.jclouds/jclouds-allblobstore "1.5.0-beta.9"]
-                 
+
                  [org.jclouds/jclouds-allcompute "1.5.0-beta.9"]
                  [org.jclouds.driver/jclouds-slf4j "1.5.0-beta.9"]
                  [org.jclouds.driver/jclouds-jsch "1.5.0-beta.9"]
