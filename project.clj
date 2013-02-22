@@ -7,13 +7,13 @@
 
                  ;; The latest jclouds fun
                  [org.cloudhoist/pallet-jclouds "1.5.2-SNAPSHOT"]
-                 [org.jclouds/jclouds-allblobstore "1.5.0-beta.9"]
+                 [org.jclouds/jclouds-allblobstore "1.5.5"]
 
-                 [org.jclouds/jclouds-allcompute "1.5.0"]
-                 [org.jclouds.driver/jclouds-slf4j "1.5.0"]
-                 [org.jclouds.driver/jclouds-jsch "1.5.0"]
-                 [org.jclouds/jclouds-compute "1.5.0"]
-                 [org.jclouds/jclouds-blobstore "1.5.0"]
+                 [org.jclouds/jclouds-allcompute "1.5.5"]
+                 [org.jclouds.driver/jclouds-slf4j "1.5.5"]
+                 [org.jclouds.driver/jclouds-jsch "1.5.5"]
+                 [org.jclouds/jclouds-compute "1.5.5"]
+                 [org.jclouds/jclouds-blobstore "1.5.5"]
                  [org.slf4j/slf4j-api "1.6.1"]
                  [ch.qos.logback/logback-core "1.0.0"]
                  [ch.qos.logback/logback-classic "1.0.0"]
@@ -23,8 +23,8 @@
                  ;; might as well be green. See
                  ;; https://www.mastodonc.com/dashboard for more
                  ;; information.
-                 [org.jclouds.provider/rackspace-cloudservers-uk "1.5.0"]
-                 [org.jclouds.labs/greenqloud-compute "1.5.0"]
+                 [org.jclouds.provider/rackspace-cloudservers-uk "1.5.5"]
+                 [org.jclouds.labs/greenqloud-compute "1.5.5"]
                  ]
   :exclusions [org.jclouds/jclouds-allblobstore
                org.jclouds/jclouds-allcompute
